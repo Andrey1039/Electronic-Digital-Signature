@@ -7,6 +7,9 @@ namespace DigitalSignature.Data
         public static BigInteger Mod(BigInteger n, BigInteger d)
         {
             BigInteger result = n % d;
+            
+            if (result < 0)
+                result += d;
 
             return result;
         }
